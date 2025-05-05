@@ -6,7 +6,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>社員更新画面</title>
+<title>社員削除画面</title>
 <style>
 .form-input {
 	width: 100%;
@@ -32,8 +32,8 @@ ShainBean shainBean = (ShainBean) request.getAttribute("shainBean");
 %>
 
 <body>
-	<h1>社員更新画面</h1>
-	<form action="ShainUpdateComplete" method="post">
+	<h1>社員削除画面</h1>
+	<form action="ShainDeleteComplete" method="post">
 		<table class="form-table">
 			<tr>
 				<td><label for="id">ID:</label></td>
@@ -53,11 +53,10 @@ ShainBean shainBean = (ShainBean) request.getAttribute("shainBean");
 			</tr>
 			<tr>
 				<td><label for="address">住所:</label></td>
-				<td><input type="text" id="address" name="address"
-					value="<%=shainBean.getAddress()%>" class="form-input" required></td>
+				<td><%=shainBean.getAddress()%></td>
 			</tr>
 		</table>
-		<button type="submit" class="form-button">更新</button>
+		<button type="submit" class="form-button">削除</button>
 
 		<input type="hidden" name="id" value="<%=shainBean.getId()%>">
 		<input type="hidden" name="name" value="<%=shainBean.getName()%>">
