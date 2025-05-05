@@ -51,8 +51,13 @@
 				<td><label for="nen">年:</label></td>
 				<td><select id="nen" name="nen" class="form-input" required>
 						<option value="">選択してください</option>
-						<option value="2001">2001</option>
-						<option value="2002">2002</option>
+						<%
+							for (int year = 2001; year <= 2024; year++) {
+						%>
+						<option value="<%=year%>"><%=year%></option>
+						<%
+							}
+						%>
 				</select></td>
 			</tr>
 			<tr>
