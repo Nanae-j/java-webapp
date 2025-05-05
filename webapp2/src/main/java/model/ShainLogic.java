@@ -11,7 +11,7 @@ import javax.naming.NamingException;
 import beans.ShainBean;
 
 public class ShainLogic {
-	//全社員を取得
+	//全社員を取得                   //エラーがあった場合にオブジェクト形式でエラーを投げる - このメソッドを使用している元でそのエラーを受け取り処理
 		public ArrayList<ShainBean> getAllShain() throws SQLException, NamingException {
 			
 			ArrayList<ShainBean> shainList = new ArrayList<ShainBean>();

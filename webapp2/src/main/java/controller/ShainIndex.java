@@ -52,6 +52,8 @@ public class ShainIndex extends HttpServlet {
 		} catch (SQLException | NamingException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
+			//エラーページへ転送
+			request.getRequestDispatcher("/WEB-INF/view/error.jsp").forward(request, response);
 		}
 	}
 
